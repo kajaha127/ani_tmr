@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "JeonjuSunR";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202@1.0/JeonjuSunR.woff") format("woff");
@@ -8,6 +9,20 @@ html,
 body {
   background-color: #090909;
   scroll-behavior: smooth;
+}
+@media screen and (max-width: 768px) {
+  html #wrap,
+  body #wrap {
+    display: none;
+  }
+  html body:after,
+  body body:after {
+    display: block;
+    font-size: 24px;
+    line-height: 100vh;
+    text-align: center;
+    content: "이 포트폴리오는 모바일을 지원하지 않습니다.";
+  }
 }
 
 #wrap {
